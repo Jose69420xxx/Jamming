@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const redirectURI = "https://jose69420xxx.github.io/Jamming/jamming/index.html"; // Your redirect URI
+const redirectURI = "https://jose69420xxx.github.io/Jamming/index.html"; // Your redirect URI
 const authURL = "https://accounts.spotify.com/authorize"; // Spotify's authorization endpoint
 const tokenEndpoint = "https://accounts.spotify.com/api/token"; // Token endpoint
 const scope = "user-read-private user-read-email"; // Permissions required
