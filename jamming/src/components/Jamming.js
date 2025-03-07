@@ -1,11 +1,12 @@
 import React from "react";
 import { useState } from "react";
 import SearchBar from "./SearchBar";
-const Jamming = () => {
-    
+const Jamming = (props) => {
+    const [token, setToken] = useState("");
+    setToken(props.accessToken);
     return (
         <div>
-            <SearchBar />        
+            <SearchBar token={token}/>        
         </div>
     );
 };
