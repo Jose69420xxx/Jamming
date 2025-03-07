@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-
+import Jamming from "./Jamming.js";
 const redirectURI = "https://jose69420xxx.github.io/Jamming/index.html"; // Your redirect URI
 const authURL = "https://accounts.spotify.com/authorize"; // Spotify's authorization endpoint
 const tokenEndpoint = "https://accounts.spotify.com/api/token"; // Token endpoint
@@ -84,7 +84,7 @@ async function refreshToken(refresh_token) {
   return await response.json();
 }
 
-// Landing Page Component
+// Landing Page Components
 const LandingPage = () => {
   const [isAuthed, setIsAuthed] = useState(false);
   const [accessToken, setAccessToken] = useState("");
@@ -129,7 +129,7 @@ const LandingPage = () => {
     <div>
       <h1>Spotify Auth</h1>
       {isAuthed ? (
-        <p>Authenticated! Token: {accessToken}</p>
+        <Jamming />
       ) : (
         <button onClick={redirectToSpotifyAuthorize}>Login with Spotify</button>
       )}
